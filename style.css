@@ -1,0 +1,455 @@
+/* =========================
+   BASIC RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #222;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    height: 75px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 8%;
+
+    background: white;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #314b3f;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+
+    color: #333;
+
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    color: #1d5c63;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    min-height: 550px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 8%;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.35)
+        ),
+        url("../images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 700px;
+
+    color: white;
+}
+
+.subtitle {
+    font-size: 14px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 60px;
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+}
+
+.hero-text {
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    max-width: 600px;
+}
+
+.hero-button {
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 14px 28px;
+
+    background: white;
+
+    color: #222;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+}
+
+.hero-button:hover {
+    background: #1d5c63;
+
+    color: white;
+}
+
+
+/* =========================
+   LATEST BLOGS
+========================= */
+
+.latest-blogs {
+    padding: 80px 8%;
+}
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+.section-title p {
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    color: #1d5c63;
+
+    margin-bottom: 10px;
+}
+
+.section-title h2 {
+    font-size: 40px;
+}
+
+
+/* =========================
+   BLOG CONTAINER
+========================= */
+
+.blog-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+
+/* =========================
+   BLOG CARD
+========================= */
+
+.blog-card {
+    background: white;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.blog-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+/* BLOG IMAGE */
+
+.blog-card img {
+    width: 100%;
+
+    height: 230px;
+
+    object-fit: cover;
+}
+
+
+/* BLOG CONTENT */
+
+.blog-content {
+    padding: 25px;
+}
+
+.blog-content span {
+    font-size: 12px;
+
+    color: #1d5c63;
+
+    letter-spacing: 2px;
+
+    font-weight: bold;
+}
+
+.blog-content h3 {
+    font-size: 23px;
+
+    line-height: 1.3;
+
+    margin: 12px 0;
+}
+
+.blog-content p {
+    color: #666;
+
+    line-height: 1.6;
+
+    margin-bottom: 15px;
+}
+
+.blog-content a {
+    text-decoration: none;
+
+    color: #222;
+
+    font-weight: bold;
+}
+
+.blog-content a:hover {
+    color: #1d5c63;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 45px;
+
+    text-align: center;
+
+    background: #183b3f;
+
+    color: white;
+}
+
+footer h3 {
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin-top: 8px;
+
+    color: #dddddd;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .blog-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        height: auto;
+
+        padding: 20px 5%;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 500px;
+
+        padding: 60px 5%;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .latest-blogs {
+        padding: 60px 5%;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+
+    .blog-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+.about-section {
+    padding: 80px 8%;
+    text-align: center;
+    background: #f8f6f1;
+}
+
+.about-section h2 {
+    font-size: 36px;
+    color: #26352f;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    max-width: 650px;
+    margin: auto;
+    color: #68736d;
+    font-size: 17px;
+    line-height: 1.7;
+}
+.tips-section {
+    padding: 80px 8%;
+    background: #ebe7de;
+    text-align: center;
+}
+
+.tips-section h2 {
+    font-size: 36px;
+    color: #26352f;
+    margin-bottom: 40px;
+}
+
+.tips-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.tip {
+    background: #ffffff;
+    padding: 30px;
+    border: 1px solid #e5e0d7;
+    border-radius: 6px;
+}
+
+.tip h3 {
+    color: #314b3f;
+    margin-bottom: 15px;
+}
+
+.tip p {
+    color: #68736d;
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+
+    .tips-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-section {
+        padding: 60px 5%;
+    }
+
+    .tips-section {
+        padding: 60px 5%;
+    }
+}
+.search-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 25px 8%;
+    background: #ffffff;
+}
+
+.search-box input {
+    width: 450px;
+    padding: 14px 18px;
+    border: 1px solid #d5cec1;
+    border-radius: 5px;
+    outline: none;
+    font-size: 15px;
+}
+
+.search-box input:focus {
+    border-color: #8b7355;
+}
+
+.search-box button {
+    padding: 14px 25px;
+    border: none;
+    border-radius: 5px;
+    background: #314b3f;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background: #8b7355;
+}
